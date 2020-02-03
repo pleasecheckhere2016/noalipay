@@ -1,14 +1,23 @@
 package com.ctrun.alipayhome;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.TranslateAnimation;
+import android.widget.TextView;
 
+import com.ctrun.alipayhome.widget.MPayPassDialog;
+import com.ctrun.alipayhome.widget.MdStyleProgress;
+import com.ctrun.alipayhome.widget.PaySuccessDialog;
 import com.lzj.pass.dialog.PayPassDialog;
 import com.lzj.pass.dialog.PayPassView;
 
-public class ZhuanZhang2Activity extends AppCompatActivity {
+public class ZhuanZhang2Activity extends Activity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,13 +35,38 @@ public class ZhuanZhang2Activity extends AppCompatActivity {
     }
 
     private void payDialog() {
-        final PayPassDialog dialog=new PayPassDialog(this);
+        final MPayPassDialog dialog=new MPayPassDialog(this);
 
-        dialog.getPayViewPass()
-                .setPayClickListener(new PayPassView.OnPayClickListener() {
+        PayPassView payViewPass = dialog.getPayViewPass();
+        payViewPass.setForgetText("找回密码并支付                                    ");
+        payViewPass.setPayClickListener(new PayPassView.OnPayClickListener() {
                     @Override
                     public void onPassFinish(String passContent) {
-                        //6位输入完成回调
+                        dialog.dismiss();
+                        PaySuccessDialog paySuccessDialog = new PaySuccessDialog(ZhuanZhang2Activity.this);
+
+                        new Thread(() -> {
+                            try {
+                                Thread.sleep(3000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            ZhuanZhang2Activity.this.runOnUiThread(() -> {
+                                paySuccessDialog.setFinish();
+
+                            });
+
+                            try {
+                                Thread.sleep(2000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+
+                            Intent intent = new Intent(getApplicationContext(),PaySuccessActivity.class);
+                            startActivity(intent);
+
+                        }).start();
+
                     }
                     @Override
                     public void onPayClose() {

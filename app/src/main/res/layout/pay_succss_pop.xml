@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ic_pay_close"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_passText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/black"
+            android:text="请输入支付密码"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_gb"/>
+
+    </RelativeLayout>
+
+    <com.ctrun.alipayhome.widget.MyAliPayView
+        android:id="@+id/myAliPayView"
+        android:background="#ffffff"
+
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        />
+
+    <TextView
+        android:id="@+id/noteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-150dp"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:text="正在付款..."/>
+</LinearLayout>

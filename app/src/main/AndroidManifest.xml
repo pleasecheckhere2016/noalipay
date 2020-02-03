@@ -26,6 +26,9 @@
             android:launchMode="singleInstance"/>
         <activity android:name=".ZhuanZhang2Activity"
             android:launchMode="singleInstance"/>
+
+        <activity android:name=".PaySuccessActivity"
+            android:launchMode="singleInstance"/>
     </application>
 
 </manifest>
