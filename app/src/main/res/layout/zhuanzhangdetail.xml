@@ -117,13 +117,6 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layerType="software"
-        android:layout_gravity="center_horizontal"
-        android:background="#f5f5f5" />
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -148,12 +141,7 @@
             android:text="转账"/>
 
     </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layerType="software"
-        android:layout_gravity="center_horizontal"
-        android:background="#f5f5f5" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -207,6 +195,30 @@
             android:textColor="#262626"
             android:layout_height="wrap_content"
             android:text="2020-2-3 12:59"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="订单号"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="#262626"
+            android:layout_height="wrap_content"
+            android:text="202002037200040011100980014779964"/>
 
     </LinearLayout>
 
