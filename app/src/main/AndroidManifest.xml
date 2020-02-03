@@ -29,6 +29,9 @@
 
         <activity android:name=".PaySuccessActivity"
             android:launchMode="singleInstance"/>
+
+        <activity android:name=".ZhangdanDetailActivity"
+            android:launchMode="singleInstance"/>
     </application>
 
 </manifest>

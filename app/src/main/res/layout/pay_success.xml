@@ -12,6 +12,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:textSize="16dp"
+            android:clickable="true"
+            android:onClick="toDetail"
             android:layout_marginLeft="330dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -52,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:text="￥0.01"
+            android:text="￥300,000"
             android:textColor="#262626"
             android:textSize="28dp"
             android:textStyle="bold" />
@@ -104,7 +106,7 @@
             android:gravity="right"
             android:textColor="#262626"
             android:paddingRight="17dp"
-            android:text="sorry（张三）"/>
+            android:text="CQX（cqx****@163.com）"/>
     </LinearLayout>
 
     <Button
