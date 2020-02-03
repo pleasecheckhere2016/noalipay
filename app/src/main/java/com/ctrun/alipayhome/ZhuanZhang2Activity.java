@@ -61,6 +61,7 @@ public class ZhuanZhang2Activity extends Activity {
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
+                            paySuccessDialog.dismiss();
 
                             Intent intent = new Intent(getApplicationContext(),PaySuccessActivity.class);
                             startActivity(intent);
