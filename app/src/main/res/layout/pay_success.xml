@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:text="￥300,000"
+            android:text="￥300,000.00"
             android:textColor="#262626"
             android:textSize="28dp"
             android:textStyle="bold" />
