@@ -57,7 +57,7 @@
                 android:textColor="#262626"
                 android:textSize="18dp"
                 android:layout_marginLeft="10dp"
-                android:text="李央"/>
+                android:text="陈秋星"/>
 
             <ImageView
                 android:layout_width="20dp"
@@ -75,7 +75,7 @@
             android:textSize="28dp"
             android:textColor="#262626"
 
-            android:text="+300,000.00"/>
+            android:text="+50,000.00"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -163,7 +163,7 @@
             android:gravity="right"
             android:textColor="#262626"
             android:layout_height="wrap_content"
-            android:text="LiYang(186******67)"/>
+            android:text="CQX（cqx****@163.com）"/>
 
     </LinearLayout>
     <View
@@ -194,7 +194,8 @@
             android:gravity="right"
             android:textColor="#262626"
             android:layout_height="wrap_content"
-            android:text="2020-2-3 12:59"/>
+            android:id="@+id/payTime"
+            android:text="2020-3-10 12:59"/>
 
     </LinearLayout>
 
@@ -218,6 +219,7 @@
             android:gravity="right"
             android:textColor="#262626"
             android:layout_height="wrap_content"
+            android:id="@+id/payNo"
             android:text="202002037200040011100980014779964"/>
 
     </LinearLayout>
