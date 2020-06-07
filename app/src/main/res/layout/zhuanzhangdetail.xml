@@ -49,7 +49,8 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/round_corner_image_by_atool"/>
+
+                android:src="@drawable/yjtp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -57,7 +58,7 @@
                 android:textColor="#262626"
                 android:textSize="18dp"
                 android:layout_marginLeft="10dp"
-                android:text="陈秋星"/>
+                android:text="*飞"/>
 
             <ImageView
                 android:layout_width="20dp"
@@ -75,7 +76,7 @@
             android:textSize="28dp"
             android:textColor="#262626"
 
-            android:text="+50,000.00"/>
+            android:text="+118,888.00"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -163,7 +164,7 @@
             android:gravity="right"
             android:textColor="#262626"
             android:layout_height="wrap_content"
-            android:text="CQX（cqx****@163.com）"/>
+            android:text="761***@qq.com"/>
 
     </LinearLayout>
     <View
@@ -195,7 +196,7 @@
             android:textColor="#262626"
             android:layout_height="wrap_content"
             android:id="@+id/payTime"
-            android:text="2020-3-10 12:59"/>
+            android:text="2019-11-27 12:59"/>
 
     </LinearLayout>
 
@@ -220,7 +221,7 @@
             android:textColor="#262626"
             android:layout_height="wrap_content"
             android:id="@+id/payNo"
-            android:text="202002037200040011100980014779964"/>
+            android:text="2019110277200040011100980014779964"/>
 
     </LinearLayout>
 

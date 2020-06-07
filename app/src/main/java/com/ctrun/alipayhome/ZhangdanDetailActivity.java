@@ -25,9 +25,9 @@ public class ZhangdanDetailActivity extends Activity {
 
         //2020-3-10 12:59
         SimpleDateFormat myFmt2=new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        payTime.setText(myFmt2.format(new Date()));
+//        payTime.setText(myFmt2.format(new Date()));
         //202002037200
         SimpleDateFormat myFmt3=new SimpleDateFormat("yyyyMMddHHmm");
-        payNo.setText(myFmt3.format(new Date()) + "040011100980014779964");
+//        payNo.setText(myFmt3.format(new Date()) + "040011100980014779964");
     }
 }

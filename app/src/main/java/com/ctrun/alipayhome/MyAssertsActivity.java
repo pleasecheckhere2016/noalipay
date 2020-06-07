@@ -1,6 +1,7 @@
 package com.ctrun.alipayhome;
 
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -20,8 +21,11 @@ public class MyAssertsActivity extends AppCompatActivity {
     private String huangjinshouyi = "";
     private String shouyi = "";
     private String shouyilv = "";
+    private String jijin = "";
 
-    private TextView[] textViews = new TextView[9];
+    private String jijinshouyi = "";
+
+    private TextView[] textViews = new TextView[11];
 
     private TextView riqi;
 
@@ -40,6 +44,9 @@ public class MyAssertsActivity extends AppCompatActivity {
         textViews[6] = (TextView) findViewById(R.id.huangjinshouyi);
         textViews[7] = (TextView) findViewById(R.id.shouyi);
         textViews[8] = (TextView) findViewById(R.id.shouyilv);
+        textViews[9] = (TextView) findViewById(R.id.jijin);
+        textViews[10] = (TextView) findViewById(R.id.jijinshouyi);
+
 
         riqi = (TextView) findViewById(R.id.riqi);
 
@@ -50,7 +57,8 @@ public class MyAssertsActivity extends AppCompatActivity {
 
         SharedPreferences preferences = getSharedPreferences("asserts", MODE_PRIVATE);
         String[] keys = preferences.getString("key", "////////").split("/");
-        if(keys.length == 9) {
+
+        if(keys.length == 11) {
             zongzichan = keys[0];
             zuorishouyi = keys[1];
             yue = keys[2];
@@ -60,9 +68,28 @@ public class MyAssertsActivity extends AppCompatActivity {
             huangjinshouyi = keys[6];
             shouyi = keys[7];
             shouyilv = keys[8];
+            jijin = keys[9];
+            jijinshouyi = keys[10];
 
             for (int i = 0; i < keys.length; i++) {
                 textViews[i].setText(keys[i]);
+                String replace = keys[i]
+                        .replace(",", "")
+                        .replace(".","");
+
+                String color = null;
+
+                if(replace.startsWith("+")) {
+                    color = "#E05723";
+
+                } else if(replace.startsWith("-")) {
+
+                    color = "#228B22";
+                }
+
+                if(color != null) {
+                    textViews[i].setTextColor(Color.parseColor(color));
+                }
             }
         }
     }
